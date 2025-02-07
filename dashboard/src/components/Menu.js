@@ -17,7 +17,7 @@ const Menu = () => {
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to log out?")) {
       localStorage.removeItem("token");
-      window.location.replace("https://main.d3ezx0nh58qsqu.amplifyapp.com");
+      window.location.replace("https://main.deod5nh2fzbv3.amplifyapp.com");
     }
   };
 

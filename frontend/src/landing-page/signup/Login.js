@@ -17,12 +17,12 @@ const Login = () => {
     console.log("Form data being sent:", formData); // Log the form data here
 
     try {
-      const { data } = await axios.post("https://zerodha-backend-htqa.onrender.com/login", formData, {
+      const { data } = await axios.post("https://zerodha-replica-backend.onrender.com/login", formData, {
         headers: { "Content-Type": "application/json" },
       });
       console.log("Response from server:", data); // Log the response from the server
       localStorage.setItem("token", data.token); // Store the token
-      window.location.replace("https://main.don25eeq6o5hk.amplifyapp.com");
+      window.location.replace("https://main.d2zn20lh0dbosr.amplifyapp.com");
     } catch (err) {
       console.error("Error occurred:", err.response?.data || err);
       setError(err.response?.data?.message || "Login failed"); // Set error message

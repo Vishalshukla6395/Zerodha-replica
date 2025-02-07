@@ -19,12 +19,12 @@ const Signup = () => {
     console.log("Form data being sent:", formData); // Log the form data here
 
     try {
-      const { data } = await axios.post("https://zerodha-backend-htqa.onrender.com/signup", formData, {
+      const { data } = await axios.post("https://zerodha-replica-backend.onrender.com/signup", formData, {
         headers: { "Content-Type": "application/json" }, // Ensure Content-Type is set
       });
       console.log("Response from server:", data); // Log the response from the server
       localStorage.setItem("token", data.token); // Store the token
-      window.location.replace("https://main.don25eeq6o5hk.amplifyapp.com");
+      window.location.replace("https://main.d2zn20lh0dbosr.amplifyapp.com");
     } catch (err) {
       console.error("Error occurred:", err.response?.data || err); // Log the error details
       if (err.response?.data?.message === "User already exists") {

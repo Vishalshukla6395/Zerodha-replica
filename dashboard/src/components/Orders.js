@@ -10,7 +10,7 @@ const Orders = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("https://zerodha-backend-htqa.onrender.com/orders")
+    axios.get("https://zerodha-replica-backend.onrender.com/orders")
       .then(response => {
         setOrders(response.data);
         setLoading(false);
